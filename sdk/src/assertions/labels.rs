@@ -199,6 +199,7 @@ pub fn add_thumbnail_format(label: &str, format: &str) -> String {
     match format {
         "image/jpeg" | "jpeg" | "jpg" => format!("{label}.jpeg"),
         "image/png" | "png" => format!("{label}.png"),
+        "image/webp" | "webp" => format!("{label}.webp"),
         _ => {
             let p: Vec<&str> = format.split('/').collect();
             if p.len() == 2 && p[0] == "image" {

@@ -43,6 +43,7 @@ pub fn make_thumbnail_from_stream<R: Read + Seek + ?Sized>(
     // for other supported types try a jpeg thumbnail
     let (output_format, format) = match format {
         ImageFormat::Png => (ImageFormat::Png, "image/png"),
+        ImageFormat::WebP => (ImageFormat::WebP, "image/webp"),
         _ => (ImageFormat::Jpeg, "image/jpeg"),
     };
     let thumbnail_bits = Vec::new();

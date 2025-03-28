@@ -76,6 +76,7 @@ pub fn make_thumbnail_from_stream<R: Read + Seek + ?Sized>(
     // for other supported types try a jpeg thumbnail
     let (output_format, format) = match format {
         ImageFormat::Png => (image::ImageOutputFormat::Png, "image/png"),
+        ImageFormat::WebP => (image::ImageOutputFormat::WebP, "image/webp"),
         _ => (
             image::ImageOutputFormat::Jpeg(THUMBNAIL_JPEG_QUALITY),
             "image/jpeg",

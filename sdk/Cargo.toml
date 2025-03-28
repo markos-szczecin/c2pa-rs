@@ -137,6 +137,7 @@ ureq = "2.4.0"
 image = { version = "0.24.7", default-features = false, features = [
     "jpeg",
     "png",
+    "webp"
 ], optional = true }
 
 [target.'cfg(target_os = "wasi")'.dependencies]
